@@ -10,7 +10,8 @@ class UserBase(BaseModel):
 
 class UserCreate(UserBase):
     email: EmailStr
-    password: str
+    password: str  # Will be truncated to 72 bytes if longer
+    full_name: str
 
 class UserUpdate(UserBase):
     password: Optional[str] = None

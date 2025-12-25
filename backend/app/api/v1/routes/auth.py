@@ -41,5 +41,18 @@ async def register_user(
     db: AsyncSession = Depends(get_db),
     user_in: UserCreate,
 ) -> Any:
-    user = await auth_service.create_user(db, user_in)
-    return user
+    try:
+        user = await auth_service.create_user(db, user_in)
+        return user
+    except HTTPException as e:
+        # Re-raise HTTP exceptions (like duplicate email)
+        raise e
+    except Exception as e:
+        # Log unexpected errors
+        import traceback
+        print(f"Registration error: {str(e)}")
+        print(traceback.format_exc())
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Registration failed: {str(e)}"
+        )

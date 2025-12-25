@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     SECRET_KEY: str = "insecure-secret-key-for-dev" # Change in production
     
     # CORS
-    BACKEND_CORS_ORIGINS: List[AnyHttpUrl] = []
+    BACKEND_CORS_ORIGINS: List[str] = []
 
     @validator("BACKEND_CORS_ORIGINS", pre=True)
     def assemble_cors_origins(cls, v: Union[str, List[str]]) -> Union[List[str], str]:
