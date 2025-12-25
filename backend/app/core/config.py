@@ -22,7 +22,7 @@ class Settings(BaseSettings):
         raise ValueError(v)
 
     # Database
-    DATABASE_URL: str = "sqlite+aiosqlite:///./sql_app.db"
+    DATABASE_URL: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/contentai"
 
     # JWT
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
