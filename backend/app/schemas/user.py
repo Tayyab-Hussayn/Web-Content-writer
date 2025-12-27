@@ -1,5 +1,5 @@
 from typing import Optional
-from pydantic import BaseModel, EmailStr, ConfigDict
+from pydantic import BaseModel, EmailStr, ConfigDict, Field
 from datetime import datetime
 
 class UserBase(BaseModel):
@@ -10,7 +10,7 @@ class UserBase(BaseModel):
 
 class UserCreate(UserBase):
     email: EmailStr
-    password: str  # Will be truncated to 72 bytes if longer
+    password: str = Field(..., min_length=8, max_length=16)  # 8-16 characters
     full_name: str
 
 class UserUpdate(UserBase):

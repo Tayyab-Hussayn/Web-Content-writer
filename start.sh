@@ -31,6 +31,9 @@ uvicorn app.main:app --port 8000 --reload &
 BACKEND_PID=$!
 cd ..
 
+echo "⏳ Waiting 8 seconds for backend to initialize..."
+sleep 8
+
 # Start Frontend
 echo "🎨 Starting Frontend Server (Next.js)..."
 cd frontend

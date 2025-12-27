@@ -1,0 +1,618 @@
+🚀 Starting AI Content Writer...
+📦 Starting Backend Server (FastAPI)...
+⏳ Waiting 8 seconds for backend to initialize...
+INFO:     Will watch for changes in these directories: ['/home/krawin/code/Web-Content-Writer/backend']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [33754] using WatchFiles
+INFO:     Started server process [33799]
+INFO:     Waiting for application startup.
+2025-12-26 11:33:13,183 INFO sqlalchemy.engine.Engine select pg_catalog.version()
+2025-12-26 11:33:13,183 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-12-26 11:33:13,188 INFO sqlalchemy.engine.Engine select current_schema()
+2025-12-26 11:33:13,188 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-12-26 11:33:13,190 INFO sqlalchemy.engine.Engine show standard_conforming_strings
+2025-12-26 11:33:13,190 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-12-26 11:33:13,193 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-26 11:33:13,203 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-12-26 11:33:13,204 INFO sqlalchemy.engine.Engine [generated in 0.00053s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-12-26 11:33:13,211 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-12-26 11:33:13,211 INFO sqlalchemy.engine.Engine [cached since 0.007723s ago] ('generations', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-12-26 11:33:13,213 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-12-26 11:33:13,213 INFO sqlalchemy.engine.Engine [cached since 0.009831s ago] ('usagelogs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-12-26 11:33:13,215 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-12-26 11:33:13,215 INFO sqlalchemy.engine.Engine [cached since 0.01188s ago] ('sessions', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-12-26 11:33:13,217 INFO sqlalchemy.engine.Engine COMMIT
+INFO:     Application startup complete.
+🎨 Starting Frontend Server (Next.js)...
+
+✅ Services are running:
+   - Backend: http://localhost:8000
+   - Frontend: http://localhost:3000
+
+🛑 Press Ctrl+C to stop all servers.
+
+> frontend@0.1.0 dev
+> next dev
+
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /home/krawin/code/Web-Content-Writer/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /home/krawin/code/Web-Content-Writer/frontend/package-lock.json
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.43.77:3000
+
+✓ Starting...
+✓ Ready in 2.3s
+WARNING:  WatchFiles detected changes in 'app/schemas/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [33799]
+Process SpawnProcess-2:
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
+    self.run()
+    ~~~~~~~~^^
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+    ~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/uvicorn/server.py", line 67, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+  File "/usr/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/uvicorn/server.py", line 71, in serve
+    await self._serve(sockets)
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/uvicorn/server.py", line 78, in _serve
+    config.load()
+    ~~~~~~~~~~~^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/uvicorn/config.py", line 439, in load
+    self.loaded_app = import_from_string(self.app)
+                      ~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/krawin/code/Web-Content-Writer/backend/app/main.py", line 33, in <module>
+    from app.api.v1.routes import auth, users, generations
+  File "/home/krawin/code/Web-Content-Writer/backend/app/api/v1/routes/auth.py", line 10, in <module>
+    from app.services import auth_service
+  File "/home/krawin/code/Web-Content-Writer/backend/app/services/auth_service.py", line 5, in <module>
+    from app.schemas.user import UserCreate
+  File "/home/krawin/code/Web-Content-Writer/backend/app/schemas/user.py", line 11, in <module>
+    class UserCreate(UserBase):
+    ...<2 lines>...
+        full_name: str
+  File "/home/krawin/code/Web-Content-Writer/backend/app/schemas/user.py", line 13, in UserCreate
+    password: str = Field(..., min_length=8, max_length=16)  # 8-16 characters
+                    ^^^^^
+NameError: name 'Field' is not defined
+WARNING:  WatchFiles detected changes in 'app/schemas/user.py'. Reloading...
+INFO:     Started server process [34665]
+INFO:     Waiting for application startup.
+2025-12-26 11:33:41,719 INFO sqlalchemy.engine.Engine select pg_catalog.version()
+2025-12-26 11:33:41,720 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-12-26 11:33:41,723 INFO sqlalchemy.engine.Engine select current_schema()
+2025-12-26 11:33:41,724 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-12-26 11:33:41,726 INFO sqlalchemy.engine.Engine show standard_conforming_strings
+2025-12-26 11:33:41,726 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-12-26 11:33:41,728 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-26 11:33:41,736 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-12-26 11:33:41,737 INFO sqlalchemy.engine.Engine [generated in 0.00078s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-12-26 11:33:41,742 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-12-26 11:33:41,742 INFO sqlalchemy.engine.Engine [cached since 0.00614s ago] ('generations', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-12-26 11:33:41,744 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-12-26 11:33:41,744 INFO sqlalchemy.engine.Engine [cached since 0.008052s ago] ('usagelogs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-12-26 11:33:41,746 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-12-26 11:33:41,746 INFO sqlalchemy.engine.Engine [cached since 0.009822s ago] ('sessions', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-12-26 11:33:41,748 INFO sqlalchemy.engine.Engine COMMIT
+INFO:     Application startup complete.
+2025-12-26 11:34:16,679 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-26 11:34:16,717 INFO sqlalchemy.engine.Engine SELECT users.id, users.email, users.password_hash, users.full_name, users.avatar_url, users.auth_provider, users.subscription_tier, users.stripe_customer_id, users.global_instructions, users.is_active, users.is_superuser, users.created_at, users.last_login 
+FROM users 
+WHERE users.email = $1::VARCHAR
+2025-12-26 11:34:16,718 INFO sqlalchemy.engine.Engine [generated in 0.00075s] ('validtest@example.com',)
+(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+Registration error: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+Traceback (most recent call last):
+  File "/home/krawin/code/Web-Content-Writer/backend/app/api/v1/routes/auth.py", line 45, in register_user
+    user = await auth_service.create_user(db, user_in)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/app/services/auth_service.py", line 31, in create_user
+    password_hash=get_password_hash(user_in.password),
+                  ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/app/core/security.py", line 43, in get_password_hash
+    return pwd_context.hash(password, truncate_error=False)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/context.py", line 2258, in hash
+    return record.hash(secret, **kwds)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 775, in hash
+    return cls.using(**settings).hash(secret, **kwds)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 779, in hash
+    self.checksum = self._calc_checksum(secret)
+                    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+    self._stub_requires_backend()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+    cls.set_backend()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+    return owner.set_backend(name, dryrun=dryrun)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+    return cls.set_backend(name, dryrun=dryrun)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+    cls._set_backend(name, dryrun)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+    super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+    ok = loader(**kwds)
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+    return mixin_cls._finalize_backend_mixin(name, dryrun)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+    if detect_wrap_bug(IDENT_2A):
+       ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+    if verify(secret, bug_hash):
+       ~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 792, in verify
+    return consteq(self._calc_checksum(secret), chk)
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+    hash = _bcrypt.hashpw(secret, config)
+ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+
+2025-12-26 11:34:16,828 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:43420 - "POST /api/v1/auth/register HTTP/1.1" 500 Internal Server Error
+WARNING:  WatchFiles detected changes in 'app/core/security.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [34665]
+INFO:     Started server process [34892]
+INFO:     Waiting for application startup.
+2025-12-26 11:35:08,093 INFO sqlalchemy.engine.Engine select pg_catalog.version()
+2025-12-26 11:35:08,093 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-12-26 11:35:08,102 INFO sqlalchemy.engine.Engine select current_schema()
+2025-12-26 11:35:08,103 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-12-26 11:35:08,116 INFO sqlalchemy.engine.Engine show standard_conforming_strings
+2025-12-26 11:35:08,116 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-12-26 11:35:08,118 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-26 11:35:08,152 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-12-26 11:35:08,152 INFO sqlalchemy.engine.Engine [generated in 0.00039s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-12-26 11:35:08,169 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-12-26 11:35:08,169 INFO sqlalchemy.engine.Engine [cached since 0.01802s ago] ('generations', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-12-26 11:35:08,171 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-12-26 11:35:08,171 INFO sqlalchemy.engine.Engine [cached since 0.01956s ago] ('usagelogs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-12-26 11:35:08,176 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-12-26 11:35:08,176 INFO sqlalchemy.engine.Engine [cached since 0.02437s ago] ('sessions', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-12-26 11:35:08,177 INFO sqlalchemy.engine.Engine COMMIT
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/core/security.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [34892]
+INFO:     Started server process [34913]
+INFO:     Waiting for application startup.
+2025-12-26 11:35:09,949 INFO sqlalchemy.engine.Engine select pg_catalog.version()
+2025-12-26 11:35:09,949 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-12-26 11:35:09,952 INFO sqlalchemy.engine.Engine select current_schema()
+2025-12-26 11:35:09,953 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-12-26 11:35:09,954 INFO sqlalchemy.engine.Engine show standard_conforming_strings
+2025-12-26 11:35:09,955 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-12-26 11:35:09,957 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-26 11:35:09,966 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-12-26 11:35:09,967 INFO sqlalchemy.engine.Engine [generated in 0.00066s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-12-26 11:35:09,970 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-12-26 11:35:09,970 INFO sqlalchemy.engine.Engine [cached since 0.004252s ago] ('generations', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-12-26 11:35:09,971 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-12-26 11:35:09,972 INFO sqlalchemy.engine.Engine [cached since 0.005727s ago] ('usagelogs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-12-26 11:35:09,973 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-12-26 11:35:09,973 INFO sqlalchemy.engine.Engine [cached since 0.007049s ago] ('sessions', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-12-26 11:35:09,974 INFO sqlalchemy.engine.Engine COMMIT
+INFO:     Application startup complete.
+2025-12-26 11:35:13,561 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-26 11:35:13,574 INFO sqlalchemy.engine.Engine SELECT users.id, users.email, users.password_hash, users.full_name, users.avatar_url, users.auth_provider, users.subscription_tier, users.stripe_customer_id, users.global_instructions, users.is_active, users.is_superuser, users.created_at, users.last_login 
+FROM users 
+WHERE users.email = $1::VARCHAR
+2025-12-26 11:35:13,574 INFO sqlalchemy.engine.Engine [generated in 0.00021s] ('manualtest@example.com',)
+(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+Registration error: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+Traceback (most recent call last):
+  File "/home/krawin/code/Web-Content-Writer/backend/app/api/v1/routes/auth.py", line 45, in register_user
+    user = await auth_service.create_user(db, user_in)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/app/services/auth_service.py", line 31, in create_user
+    password_hash=get_password_hash(user_in.password),
+                  ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/app/core/security.py", line 48, in get_password_hash
+    return pwd_context.hash(password)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/context.py", line 2258, in hash
+    return record.hash(secret, **kwds)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 779, in hash
+    self.checksum = self._calc_checksum(secret)
+                    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+    self._stub_requires_backend()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+    cls.set_backend()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+    return owner.set_backend(name, dryrun=dryrun)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+    return cls.set_backend(name, dryrun=dryrun)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+    cls._set_backend(name, dryrun)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+    super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+    ok = loader(**kwds)
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+    return mixin_cls._finalize_backend_mixin(name, dryrun)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+    if detect_wrap_bug(IDENT_2A):
+       ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+    if verify(secret, bug_hash):
+       ~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 792, in verify
+    return consteq(self._calc_checksum(secret), chk)
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+    hash = _bcrypt.hashpw(secret, config)
+ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+
+2025-12-26 11:35:13,589 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:54606 - "POST /api/v1/auth/register HTTP/1.1" 500 Internal Server Error
+./start.sh: line 50: 33754 Killed                     uvicorn app.main:app --port 8000 --reload  (wd: ~/code/Web-Content-Writer/backend)
+[?25h
+INFO:     127.0.0.1:35518 - "OPTIONS /api/v1/auth/register HTTP/1.1" 200 OK
+2025-12-26 11:42:21,307 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-26 11:42:21,308 INFO sqlalchemy.engine.Engine SELECT users.id, users.email, users.password_hash, users.full_name, users.avatar_url, users.auth_provider, users.subscription_tier, users.stripe_customer_id, users.global_instructions, users.is_active, users.is_superuser, users.created_at, users.last_login 
+FROM users 
+WHERE users.email = $1::VARCHAR
+2025-12-26 11:42:21,309 INFO sqlalchemy.engine.Engine [cached since 427.7s ago] ('tayyab@gmail.com',)
+(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+Registration error: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+Traceback (most recent call last):
+  File "/home/krawin/code/Web-Content-Writer/backend/app/api/v1/routes/auth.py", line 45, in register_user
+    user = await auth_service.create_user(db, user_in)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/app/services/auth_service.py", line 31, in create_user
+    password_hash=get_password_hash(user_in.password),
+                  ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/app/core/security.py", line 48, in get_password_hash
+    return pwd_context.hash(password)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/context.py", line 2258, in hash
+    return record.hash(secret, **kwds)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 779, in hash
+    self.checksum = self._calc_checksum(secret)
+                    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+    self._stub_requires_backend()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+    cls.set_backend()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+    return owner.set_backend(name, dryrun=dryrun)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+    return cls.set_backend(name, dryrun=dryrun)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+    cls._set_backend(name, dryrun)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+    super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+    ok = loader(**kwds)
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+    return mixin_cls._finalize_backend_mixin(name, dryrun)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+    if detect_wrap_bug(IDENT_2A):
+       ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+    if verify(secret, bug_hash):
+       ~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 792, in verify
+    return consteq(self._calc_checksum(secret), chk)
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+    hash = _bcrypt.hashpw(secret, config)
+ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+
+2025-12-26 11:42:21,330 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:35518 - "POST /api/v1/auth/register HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:39918 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:39918 - "GET /sw.js HTTP/1.1" 404 Not Found
+2025-12-26 11:47:11,524 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-26 11:47:11,524 INFO sqlalchemy.engine.Engine SELECT users.id, users.email, users.password_hash, users.full_name, users.avatar_url, users.auth_provider, users.subscription_tier, users.stripe_customer_id, users.global_instructions, users.is_active, users.is_superuser, users.created_at, users.last_login 
+FROM users 
+WHERE users.email = $1::VARCHAR
+2025-12-26 11:47:11,525 INFO sqlalchemy.engine.Engine [cached since 718s ago] ('tayyab@gmail.com',)
+(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+Registration error: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+Traceback (most recent call last):
+  File "/home/krawin/code/Web-Content-Writer/backend/app/api/v1/routes/auth.py", line 45, in register_user
+    user = await auth_service.create_user(db, user_in)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/app/services/auth_service.py", line 31, in create_user
+    password_hash=get_password_hash(user_in.password),
+                  ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/app/core/security.py", line 48, in get_password_hash
+    return pwd_context.hash(password)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/context.py", line 2258, in hash
+    return record.hash(secret, **kwds)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 779, in hash
+    self.checksum = self._calc_checksum(secret)
+                    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+    self._stub_requires_backend()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+    cls.set_backend()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+    return owner.set_backend(name, dryrun=dryrun)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+    return cls.set_backend(name, dryrun=dryrun)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+    cls._set_backend(name, dryrun)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+    super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+    ok = loader(**kwds)
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+    return mixin_cls._finalize_backend_mixin(name, dryrun)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+    if detect_wrap_bug(IDENT_2A):
+       ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+    if verify(secret, bug_hash):
+       ~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 792, in verify
+    return consteq(self._calc_checksum(secret), chk)
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+    hash = _bcrypt.hashpw(secret, config)
+ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+
+2025-12-26 11:47:11,538 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:53550 - "POST /api/v1/auth/register HTTP/1.1" 500 Internal Server Error
+2025-12-26 11:53:26,439 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-26 11:53:26,440 INFO sqlalchemy.engine.Engine SELECT users.id, users.email, users.password_hash, users.full_name, users.avatar_url, users.auth_provider, users.subscription_tier, users.stripe_customer_id, users.global_instructions, users.is_active, users.is_superuser, users.created_at, users.last_login 
+FROM users 
+WHERE users.email = $1::VARCHAR
+2025-12-26 11:53:26,440 INFO sqlalchemy.engine.Engine [cached since 1093s ago] ('test@example.com',)
+(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+Registration error: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+Traceback (most recent call last):
+  File "/home/krawin/code/Web-Content-Writer/backend/app/api/v1/routes/auth.py", line 45, in register_user
+    user = await auth_service.create_user(db, user_in)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/app/services/auth_service.py", line 31, in create_user
+    password_hash=get_password_hash(user_in.password),
+                  ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/app/core/security.py", line 48, in get_password_hash
+    return pwd_context.hash(password)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/context.py", line 2258, in hash
+    return record.hash(secret, **kwds)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 779, in hash
+    self.checksum = self._calc_checksum(secret)
+                    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+    self._stub_requires_backend()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+    cls.set_backend()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+    return owner.set_backend(name, dryrun=dryrun)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+    return cls.set_backend(name, dryrun=dryrun)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+    cls._set_backend(name, dryrun)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+    super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+    ok = loader(**kwds)
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+    return mixin_cls._finalize_backend_mixin(name, dryrun)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+    if detect_wrap_bug(IDENT_2A):
+       ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+    if verify(secret, bug_hash):
+       ~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 792, in verify
+    return consteq(self._calc_checksum(secret), chk)
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+    hash = _bcrypt.hashpw(secret, config)
+ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+
+2025-12-26 11:53:26,460 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:59704 - "POST /api/v1/auth/register HTTP/1.1" 500 Internal Server Error
+2025-12-26 11:57:07,507 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-26 11:57:07,507 INFO sqlalchemy.engine.Engine SELECT users.id, users.email, users.password_hash, users.full_name, users.avatar_url, users.auth_provider, users.subscription_tier, users.stripe_customer_id, users.global_instructions, users.is_active, users.is_superuser, users.created_at, users.last_login 
+FROM users 
+WHERE users.email = $1::VARCHAR
+2025-12-26 11:57:07,507 INFO sqlalchemy.engine.Engine [cached since 1314s ago] ('newtest@example.com',)
+(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+Registration error: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+Traceback (most recent call last):
+  File "/home/krawin/code/Web-Content-Writer/backend/app/api/v1/routes/auth.py", line 45, in register_user
+    user = await auth_service.create_user(db, user_in)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/app/services/auth_service.py", line 31, in create_user
+    password_hash=get_password_hash(user_in.password),
+                  ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/app/core/security.py", line 48, in get_password_hash
+    return pwd_context.hash(password)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/context.py", line 2258, in hash
+    return record.hash(secret, **kwds)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 779, in hash
+    self.checksum = self._calc_checksum(secret)
+                    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+    self._stub_requires_backend()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+    cls.set_backend()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+    return owner.set_backend(name, dryrun=dryrun)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+    return cls.set_backend(name, dryrun=dryrun)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+    cls._set_backend(name, dryrun)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+    super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+    ok = loader(**kwds)
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+    return mixin_cls._finalize_backend_mixin(name, dryrun)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+    if detect_wrap_bug(IDENT_2A):
+       ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+    if verify(secret, bug_hash):
+       ~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/utils/handlers.py", line 792, in verify
+    return consteq(self._calc_checksum(secret), chk)
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/home/krawin/code/Web-Content-Writer/backend/venv/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+    hash = _bcrypt.hashpw(secret, config)
+ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+
+2025-12-26 11:57:07,522 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:45032 - "POST /api/v1/auth/register HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:53494 - "GET /sw.js HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:36972 - "GET /sw.js HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:36988 - "GET /sw.js HTTP/1.1" 404 Not Found
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [34913]

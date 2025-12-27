@@ -6,8 +6,7 @@ from app.core.config import settings
 
 pwd_context = CryptContext(
     schemes=["bcrypt"],
-    deprecated="auto",
-    bcrypt__truncate_error=False  # Auto-truncate passwords longer than 72 bytes
+    deprecated="auto"
 )
 
 ALGORITHM = "HS256"
@@ -38,6 +37,12 @@ def verify_password(plain_password: str, hashed_password: str) -> bool:
     return pwd_context.verify(plain_password, hashed_password)
 
 def get_password_hash(password: str) -> str:
-    # Bcrypt has a 72-byte limit
-    # Use truncate_error=False to auto-truncate instead of raising an error
-    return pwd_context.hash(password, truncate_error=False)
+    # Bcrypt has a strict 72-byte limit
+    # Manually truncate to avoid any errors
+    password_bytes = password.encode('utf-8')
+    if len(password_bytes) > 72:
+        # Truncate to 72 bytes
+        password = password_bytes[:72].decode('utf-8', errors='ignore')
+    
+    # Hash the (possibly truncated) password
+    return pwd_context.hash(password)
